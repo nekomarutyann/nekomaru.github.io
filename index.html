@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ずんだもんが話しかけてくれるツール</title>
+    <link rel="stylesheet" href="top.css">
+    <script src="top.js"></script>
+</head>
+<body>
+
+ 
+
+    <dvi class="kawa">
+        <img src="https://voicevox.hiroshiba.jp/static/7da24e15118528310d0270a29ef82165/eadd3/bustup-zundamon.png" class="miku">
+    </dvi>
+
+    <div class="oya">
+    <img src="https://azukichi.net/img/frame2/frame00016.jpg" class="huki">
+    <div class="mozi" id="zunn"></div>
+ 
+
+
+    <script>
+    
+    //文字列（ずんだもんがセリフをしゃべる）
+    const zun = ["ずんだもんなのだ！","JSが適応できてよかったのだ！","優奈のお母さんたちが株の話してるのだ","ラダゴン強すぎなのだ！","マレニア倒したー！！？ん？第二形態、、、","ずん子～きりたんが破いた障子を隠そうとしているのだ！","ずん子～きりたんが0点のテストを隠し持ってたのだ！","引きこもりのクソガキ小学生は黙れなのだ！","きりたん「ずん虐の、始まりだ。」","きりたん「それってあなたの感想ですよね」","う～おなかすいたのだ",""];
+    
+    //ずんだもんなのだ（音声）
+ 
+
+
+
+                //ランダムでセリフを決定
+                var random = Math.floor( Math.random() * zun.length );
+                document.getElementById("zunn").textContent =  zun[random];
+
+
+            document.addEventListener('keypress', keypress_ivent);
+
+            function keypress_ivent(e) {
+            	if(e.code === 'KeyA'){
+            		//Aキーが押された時の処理                       
+                    music.play();
+
+            	}
+            	return false; 
+            }
+
+
+
+                //1秒たったらロードする
+                const timer = 10000    // ミリ秒で間隔の時間を指定
+                window.addEventListener('load',function(){
+                  setInterval('location.reload()',timer);
+                
+                });
+
+        
+
+    </script>
+ 
+    
+
+
+    </div>
+</body>
+</html>
